@@ -31,6 +31,12 @@ jobs:
         
       - name: Build the app
         run: npm run build
+        
+      - name: Save artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: .build
 
       # Runs a set of commands using the runners shell
       - name: Print environment variables
